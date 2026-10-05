@@ -17,7 +17,7 @@ jobs:
         with: { fetch-depth: 0 }
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
-      - run: pip install pyrofork==2.3.69 tgcrypto
+      - run: pip install pyrofork==2.3.69 tgcrypto aiohttp
       - run: python bot_gh.py
         env:
           API_ID: ${{ secrets.API_ID }}
@@ -33,6 +33,12 @@ jobs:
           PACK_EVERY: "600"
           MAX_MINUTES: "50"
           INITIAL_SCAN: "0"
+          GH_REPO: "Argh94/V2RayAutoConfig"
+          GH_BRANCH: "main"
+          GH_FOLDER: "configs"
+          GH_TAIL: "40"
+          TEST_ENABLED: "1"
+          TEST_LIMIT: "300"
           REPORT: "1"
       - name: Save state
         if: always()
