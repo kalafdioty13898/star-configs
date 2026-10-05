@@ -30,9 +30,9 @@ jobs:
           QUOTE: ${{ secrets.QUOTE }}
           CHANNEL: ${{ secrets.CHANNEL }}
           PACK_SIZE: "3"
-          PACK_EVERY: "10"
-          MAX_MINUTES: "2"
-          INITIAL_SCAN: "30"
+          PACK_EVERY: "600"
+          MAX_MINUTES: "50"
+          INITIAL_SCAN: "0"
           REPORT: "1"
       - name: Save state
         if: always()
