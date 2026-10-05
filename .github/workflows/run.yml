@@ -17,7 +17,7 @@ jobs:
         with: { fetch-depth: 0 }
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
-      - run: pip install pyrofork tgcrypto
+      - run: pip install pyrofork==2.3.69 tgcrypto
       - run: python bot_gh.py
         env:
           API_ID: ${{ secrets.API_ID }}
