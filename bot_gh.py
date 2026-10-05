@@ -202,7 +202,7 @@ async def main():
                        f"🧮 کل: {S['stats']['total_packs']} پک / {S['stats']['total_configs']} کانفیگ\n"
                        f"📅 امروز: {S['daily'].get(day, {}).get('packs', 0)} پک")
                 try:
-                    await c.send_message("me", txt, parse_mode="HTML")
+                    await c.send_message("me", txt, parse_mode="html")
                 except Exception as ex:
                     print("⚠️ گزارش: " + str(ex)[:80])
         else:
