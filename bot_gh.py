@@ -89,7 +89,7 @@ def parse_endpoint(raw):
             j = json.loads(base64.urlsafe_b64decode(b).decode("utf-8", "ignore"))
             host, port = (j.get("add") or "").strip(), int(j.get("port") or 0)
         else:
-            PROTO_RE = re.compile(r"(?:ss|vless|trojan|vmess|hysteria2?|hy2|tuic|ssr)://[^\s\"']+", re.I)
+            m = re.match(r"[a-z0-9]+://[^@/]+@(\[[^\]]+\]|[^:/?#+]+):(\d+)", raw, re.I)
             if not m:
                 return None
             host, port = m.group(1).strip("[]"), int(m.group(2))
