@@ -32,7 +32,7 @@ REPORT = os.environ.get("REPORT", "1") == "1"
 HOURLY_CAPACITY = (MAX_MINUTES * 60) // PACK_EVERY * PACK_SIZE if PACK_EVERY else MAX_MINUTES
 POOL_CAP, STATE_FILE = 5000, "state.json"
 SEP = "━━━━━━━━━━━━━━━━━━"
-PROTO_RE = re.compile(r"(?:ss|vless|trojan|vmess|hysteria2?|hy2|tuic|ssr)://[^\s\"']+)", re.I)
+PROTO_RE = re.compile(r"(?:ss|vless|trojan|vmess|hysteria2?|hy2|tuic|ssr)://[^\s\"']+", re.I)
 
 _ISO = {"afghanistan":"AF","albania":"AL","algeria":"DZ","argentina":"AR","armenia":"AM",
 "australia":"AU","austria":"AT","azerbaijan":"AZ","bahrain":"BH","bangladesh":"BD",
